@@ -5,14 +5,21 @@ El desafío es implementar una función que maneje de manera eficiente las llama
 
 <!-- copied from Getting Started docs, links updated to point to Jest website -->
 
-Install Jest using [`yarn`](https://yarnpkg.com/en/package/jest):
+Instala las dependencias using [`npm`]
 
 ```bash
-yarn add --dev jest
+npm install
 ```
 
-Or [`npm`](https://www.npmjs.com/package/jest):
+## Ejecuta las pruebas unitarias
 
 ```bash
-npm install --save-dev jest
+npm run test
+```
+
+
+## Ejecuta el programa con node
+
+```bash
+node index.js
 ```
