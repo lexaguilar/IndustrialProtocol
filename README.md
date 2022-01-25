@@ -16,7 +16,7 @@ Ejecuta las pruebas unitarias
 ```bash
 npm run test
 ```
-![image](https://user-images.githubusercontent.com/42163487/151069587-38a8962d-b792-43e4-93e8-de0e2d607b01.png)
+![image](https://user-images.githubusercontent.com/42163487/151071153-edab2a18-6db0-47d9-989c-598a70433752.png)
 
 
 Ejecuta el programa con node
