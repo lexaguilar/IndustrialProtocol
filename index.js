@@ -1,24 +1,19 @@
 const dataMemory = require('./data-memory');
 
-const tupla = {
-    start:0,
-    end:0,
-    callback: () => {}
-}
-
-
 /**
  * protocolo industrial 
  */
 const industrialProtocol = {
-    read: async (start, end, callback) => {
+    read: (start=0, length=0, callback) => {
 
-        try {
-            const array = [...dataMemory.slice(start, end)];        
-            return () => callback(null, array);
-        } catch (error) {
-            return () => callback(error);
-        }
+        const bufferArray = [];
+
+        for (let i = start; i < (start + length); i++) 
+            bufferArray.push(dataMemory[i]); 
+        
+        //retornar el buffer
+        return bufferArray;
+
         
     }
 }
@@ -29,17 +24,26 @@ const industrialProtocol = {
  */
 const accessMemory = (...tuplas) => {
 
-    tuplas.forEach(async tupla => {
+    return tuplas.map(tupla => {
 
-        const { start, end, callback } = tupla;
-        const result = await industrialProtocol.read(start, end, callback);
+        const { start, length, callback } = tupla;
 
-        result();
+        //Llamar la funcion read por cada solicitud
+        const bufferArray = industrialProtocol.read(start, length);
+
+        //retornar la funcion callback con el patload de datos
+        return callback(bufferArray);
 
     });
 
 }
 
-accessMemory(
-     { start: 10, end: 20, callback: (err, payload) => console.log(`Payload: ${payload}`) }
-);
+const callbackDefault = payload => payload;
+
+accessMemory({ start: 10, length: 15, callback: callbackDefault });
+
+module.exports = {
+    callbackDefault,
+    accessMemory,
+    industrialProtocol,
+};
