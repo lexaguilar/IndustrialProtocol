@@ -11,7 +11,7 @@
 }
 
 /**
- * Generar un array de numeros en un rango dado
+ * Almacena un array de numeros en un rango dado a la funcion generadora
  */
 const dataMemory = [...arrayGenerator(0, 4095)];
 
