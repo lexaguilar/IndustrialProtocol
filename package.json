@@ -1,0 +1,22 @@
+{
+  "name": "industrialprotocol",
+  "version": "1.0.0",
+  "description": "El desafío es implementar una función que maneje de manera eficiente las llamadas de una operación de lectura para un protocolo industrial.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexaguilar/IndustrialProtocol.git"
+  },
+  "keywords": [
+    "pervasivemind"
+  ],
+  "author": "lexaguilar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lexaguilar/IndustrialProtocol/issues"
+  },
+  "homepage": "https://github.com/lexaguilar/IndustrialProtocol#readme"
+}
