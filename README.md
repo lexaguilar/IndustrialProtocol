@@ -1,7 +1,7 @@
 # IndustrialProtocol
 El desafío es implementar una función que maneje de manera eficiente las llamadas de una operación de lectura para un protocolo industrial.
 
-## Getting Started
+## Iniciando
 
 <!-- copied from Getting Started docs, links updated to point to Jest website -->
 
@@ -11,14 +11,14 @@ Instala las dependencias using [`npm`]
 npm install
 ```
 
-## Ejecuta las pruebas unitarias
+Ejecuta las pruebas unitarias
 
 ```bash
 npm run test
 ```
 
 
-## Ejecuta el programa con node
+Ejecuta el programa con node
 
 ```bash
 node index.js
